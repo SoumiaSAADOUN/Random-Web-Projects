@@ -1,0 +1,75 @@
+*::before, *::after{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif !important;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background-image.webp');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+h1{
+    margin:0; color: whitesmoke;
+    text-align: center;
+}
+.wrapper{
+    background:hsla(0, 100%, 70%, 0.3);
+    width: 20vw;
+    padding: 5vw;
+    border-radius: 20px;
+    color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    
+    /* opacity: 0.7; */
+}
+
+input{
+    background: hsla(0, 100%, 95%, 0.9);
+    border-radius: 5px;
+    border: 1px solid pink;
+    height: 30px;
+    /* box-shadow: whitesmoke 0 1px 2px ; */
+    outline:none;
+    /* font-size: 16px ; */
+    /* margin-block:5px */
+}
+label{
+    font-size: 14px;
+}
+.inputContainer span{
+    font-size:10px;
+    align-self: flex-end;
+}
+.inputContainer{
+    display:flex;
+    flex-direction: column;
+    gap:7px
+    
+}
+
+button{
+    height:40px;
+    background: pink;
+    color:hsl(0, 66%, 57%);
+    border-color: pink;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-block: 5px;
+    margin-inline:20px;
+    cursor:pointer;
+    /* padding-inline: 30px; */
+    /* align-self: flex-end; */
+
+}
+
+.inputContainer input:focus{
+    border: 2px solid hsl(0, 66%, 57%);
+    /* box-shadow: 0 0 0 2px  hsl(0, 66%, 57%); */
+}
