@@ -69,6 +69,27 @@ button{
 
 }
 
+label::after{
+    content:'*';
+    color:red;
+    font-size: 12px;
+
+}
+[data-tooltip]{
+    position: relative;
+}
+[data-tooltip]:hover::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    top:100%;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    margin-top: 5px;
+    color: hsla(0, 100%, 95%, 0.9);
+    /* background-color: hsla(0, 100%, 95%, 0.9); */
+}
+
 .inputContainer input:focus{
     border: 2px solid hsl(0, 66%, 57%);
     /* box-shadow: 0 0 0 2px  hsl(0, 66%, 57%); */
