@@ -18,7 +18,7 @@ inputFile.addEventListener('change', ()=>{
      
         let non_valides_file= new Blob([non_valides], {type:'text/plain'});
         let download_non_valides = document.createElement("a");
-        download_non_valides.href=URL.createObjectURL(valides_file);
+        download_non_valides.href=URL.createObjectURL(non_valides_file);
         download_non_valides.download=`non_valides_${(new Date().toJSON().slice(0,10))}.txt`;
         download_non_valides.click();
 
