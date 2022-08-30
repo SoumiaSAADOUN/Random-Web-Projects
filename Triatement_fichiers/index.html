@@ -5,13 +5,23 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Load files</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='script.js' defer></script>
+   
 </head>
-<body>
+<body >
+    <nav>
+        <img alt="logo-anem" src="logo_anem.png"/>
+    </nav>
     <div id="container">
-        <h1>test</h1>
-        <input type="file" id="inputFile">
+        <h1>Traitement des fichiers <span>EDI</span></h1>
+        <label>
+           <h4 style="margin:0">Importer le fichier</h4> 
+            <input type="file" id="inputFile" accept=".txt">
+            <i class="fa fa-file-text-o" style="font-size:36px;"></i>
+        </label>
+        
     </div>
    
 </body>
