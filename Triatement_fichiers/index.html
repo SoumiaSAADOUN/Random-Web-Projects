@@ -8,17 +8,20 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='script.js' defer></script>
+   
 </head>
-<body onload="window.resizeTo(500,500)">
+<body >
     <nav>
-        <img src="logo_anem.png" alt="logo-anem" >
+        <img alt="logo-anem" src="logo_anem.png"/>
     </nav>
     <div id="container">
         <h1>Traitement des fichiers <span>EDI</span></h1>
-       <label for='inputFile' >
-        Sélectionner le fichier <i class="fa fa-file-text-o" style="font-size:36px;"></i>
-        <input type="file" id="inputFile"   accept=".txt">
-       </label> 
+        <label>
+           <h4 style="margin:0">Importer le fichier</h4> 
+            <input type="file" id="inputFile" accept=".txt">
+            <i class="fa fa-file-text-o" style="font-size:36px;"></i>
+        </label>
+        
     </div>
    
 </body>

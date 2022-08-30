@@ -1,5 +1,5 @@
 *{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body{ margin: 0; padding: 0;}
 h1::first-letter ,h1 > span{
@@ -13,6 +13,13 @@ nav {
     
   }
 
+html, body{
+    width: 500px;
+    height: 700px;
+}
+:root{
+    --primary-color : hsl(147, 58%, 28%)
+}
 #container{
     margin: 0;
     display: flex;
@@ -21,34 +28,44 @@ nav {
     width: 100vw;
     justify-content: center;
     align-items: center;
+    
+  
+}
+h1::first-letter, h1 span{
+    color: hsl(147, 58%, 28%);
+    font-size: 2.5rem;
+}
+label{padding:20px;
+    border: 1px solid gainsboro;
+    background-color: ghostwhite;
+    border-radius: 12px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.2s;
+    cursor: pointer;
+}
+ input[type='file']{
+    /* visibility: hidden; */
+    cursor: pointer;
 }
 
-input[type='file']{
-    display: none;
-    cursor: pointer;
-    
-}
-label[for='inputFile']{
-    border: 1px solid hsl(150, 57%, 24%);
-    padding-block: 10px;
-    padding-inline: 20px;
-    border-radius: 5px;
-    background-color: hsl(150, 57%, 24%);
-    color: whitesmoke;
+/* label{
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap:10;
-    flex-grow: 0.2;
-}
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    margin: 20px;
+    color: whitesmoke;
+    background-color:var(--primary-color);
+    border-radius: 12px;
+}  */
 
-label[for='inputFile']:hover{
-    background-color:whitesmoke;
-    color:  hsl(150, 57%, 24%);
-}
-
-img[alt="logo-anem"]{
-    width: 12rem;
+label:hover{
+    color: whitesmoke;
+    background-color: var(--primary-color);
+    top: -5px;
+    cursor: pointer;
 }
