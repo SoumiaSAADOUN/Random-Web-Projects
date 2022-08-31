@@ -1,0 +1,5 @@
+/* DOCUMENTATION */
+
+Ce document concerne le service de traitement des fichiers EDI dans le cadre du projet de l'allocation chômage "Minha".
+Afin de faciliter la tâche de traitement des fichiers EDI reçus de la part de Algérie poste, ce service a été mis en place pour automatiser la taches d’extraction des enregistrements dont le champ « INTITULES FICHIER C/C » présentent des anomalies. 
+Comme input, le service reçoit le ficher tel qu’il a été reçu. Il le traite ligne par ligne et retourne en sortie un fichier CSV contenant la liste des enregistrement avec anomalie, prêt à être exploité directement par l’équipe des DBA.

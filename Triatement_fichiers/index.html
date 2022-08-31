@@ -3,7 +3,8 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Load files</title>
+    <link rel="icon" href="anem-logo.png" />
+    <title>Traitement des fichiers EDI</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,6 +22,12 @@
             <input type="file" id="inputFile" accept=".txt">
             <i class="fa fa-file-text-o" style="font-size:36px;"></i>
         </label>
+
+        <div id="progressBar">
+            <div id="theBar"></div>
+            <h2 id="success" style="visibility: hidden ; text-align: center;">Opération terminée avec succès !</h2>
+        </div>
+          
         
     </div>
    
