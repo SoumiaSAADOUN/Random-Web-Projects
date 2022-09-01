@@ -17,15 +17,36 @@
     </nav>
     <div id="container">
         <h1>Traitement des fichiers <span>EDI</span></h1>
-        <label>
-           <h4 style="margin:0">Importer le fichier</h4> 
-            <input type="file" id="inputFile" accept=".txt">
-            <i class="fa fa-file-text-o" style="font-size:36px;"></i>
-        </label>
+   
+         <div class="buttonsContainer">
+            
+           <div  class="buttonsContainer">
+            <label>
+                <h4 style="margin:0">Importer le fichier</h4> 
+                 <input type="file" id="inputFile" accept=".txt">
+                 <i class="fa fa-file-text-o" style="font-size:36px;"></i>
+             </label>
+   </div>
+
+   <div  class="buttonsContainer">
+  
+         <label>
+            <h4 style="margin:0">Importer le fichier EDI final</h4> 
+             <input type="file" id="inputFinalEDI" accept=".txt">
+             <i class="fa fa-file-text-o" style="font-size:36px;"></i>
+         </label>
+           </div>
+         </div>
 
         <div id="progressBar">
             <div id="theBar"></div>
             <h2 id="success" style="visibility: hidden ; text-align: center;">Opération terminée avec succès !</h2>
+            <div id="result">
+                <p class="resultItem" >Nombre d'enregistrements dans l'EDI TEST <span id="total"></span></p>
+                <p class="resultItem" >Nombre d'enregistrements A BLOQUER dans l'EDI TEST <span id="bloques"></span></p>
+                <p class="resultItem" >Nombre d'enregistrements VALIDES dans l'EDI TEST <span id="valides"></span></p>
+
+            </div>
         </div>
           
         
