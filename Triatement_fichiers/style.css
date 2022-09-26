@@ -24,11 +24,11 @@ nav {
   /* margin: 0; */
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
-  flex-wrap:wrap;
+  /* flex-wrap:wrap; */
 }
 .buttonsContainer {
   display: flex;
@@ -101,7 +101,6 @@ label:hover {
   justify-content: center;
   align-items: center;
   width: 80%;
-  justify-content: center;
   text-align: center;
   background-color: #ddd;
   visibility: hidden;
@@ -115,14 +114,16 @@ label:hover {
   color: azure;
   border-radius: 12px;
   margin: 50px;
+  margin-bottom:0px
 }
 
-#result {
-  display: flex;
+#result, #result_division {
+  display: none;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  visibility: hidden;
+  /* visibility: hidden; */
   gap: 30px;
+  margin-top:0;
 }
 .resultItem::first-letter,
 .resultItem span {

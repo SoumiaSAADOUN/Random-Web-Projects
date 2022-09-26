@@ -14,18 +14,20 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <nav style="width:100%">
+    <nav style="width: 100%">
       <img alt="logo-anem" src="logo_anem.png" />
     </nav>
     <div id="container">
       <h1>Traitement des fichiers <span>EDI</span></h1>
 
       <div class="buttonsContainer">
-      
         <div class="buttonContainer">
-            <h3 style="text-align:center">Extraction des enregistrements à bloquer à partir du fichier parvenu d'Algérie poste</h3>
+          <h3 style="text-align: center">
+            Extraction des enregistrements à bloquer à partir du fichier parvenu
+            d'Algérie poste
+          </h3>
           <label>
-            <h4 style="margin: 0;" >Importer le fichier </h4>
+            <h4 style="margin: 0">Importer le fichier</h4>
             <input type="file" id="inputFile" accept=".txt" />
             <i class="fa fa-file-text-o" style="font-size: 36px"></i>
           </label>
@@ -35,18 +37,21 @@
           class="buttonContainer"
           data-tooltip="Assurez-vous que le fichier ne contient pas des lignes vides à la fin"
         >
-        <h3 style="text-align:center">Partage du fichier EDI final sur des fichiers d'un volume max de 600K enregistrements</h3>
+          <h3 style="text-align: center">
+            Partage du fichier EDI final sur trois fichiers d'un volume max de
+            800K enregistrements
+          </h3>
           <label>
-            <h4 style="margin: 0;">Importer le fichier </h4>
+            <h4 style="margin: 0">Importer le fichier</h4>
             <input type="file" id="inputFinalEDI" />
             <i class="fa fa-file-text-o" style="font-size: 36px"></i>
           </label>
         </div>
       </div>
 
-      <div id="progressBar"> 
+      <div id="progressBar">
         <div id="theBar"></div>
-        <h2 id="success" style="visibility: hidden; text-align: center">
+        <h2 id="success" style="visibility: hidden; text-align: center; margin-bottom: 0px;">
           Opération terminée avec succès !
         </h2>
         <div id="result">
@@ -56,6 +61,20 @@
           <p class="resultItem">
             Nombre d'enregistrements A BLOQUER dans l'EDI TEST
             <span id="bloques"></span>
+          </p>
+          <!-- <p class="resultItem" >Nombre d'enregistrements VALIDES dans l'EDI TEST <span id="valides"></span></p> -->
+        </div>
+        <div id="result_division">
+          <p class="resultItem">
+            Taille du premier fichier <span id="first"></span>
+          </p>
+          <p class="resultItem">
+            Taille du deixième fichier
+            <span id="second"></span>
+          </p>
+          <p class="resultItem">
+            Taille du troisième fichier
+            <span id="third"></span>
           </p>
           <!-- <p class="resultItem" >Nombre d'enregistrements VALIDES dans l'EDI TEST <span id="valides"></span></p> -->
         </div>
