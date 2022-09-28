@@ -221,9 +221,9 @@ inputFinalEDI.addEventListener("change", () => {
       .slice(0, 10)}.txt`;
     download_third_file.click();
 
-    document.getElementById("first").innerText = firstGroupList.length;
-    document.getElementById("second").innerText = secondGroupList.length;
-    document.getElementById("third").innerText = thirdGroupList.length;
+    document.getElementById("first").innerText = firstGroupList.length-1;
+    document.getElementById("second").innerText = secondGroupList.length-1;
+    document.getElementById("third").innerText = thirdGroupList.length-1;
     // document.getElementById("valides").innerText=valides.length;
     document.getElementById("result_division").style.display = "flex";
     document.getElementById("result_division").style.visibility = "visible";
