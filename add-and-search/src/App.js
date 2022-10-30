@@ -1,10 +1,13 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 function App() {
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState("");
   const itemRef = useRef();
-  const filterdItems = items.filter((item) => item.includes(search));
+  const filterdItems = useMemo(
+    () => items.filter((item) => item.includes(search)),
+    [search, items]
+  );
   const handleAdd = (e) => {
     e.preventDefault();
     const value = itemRef.current.value;
