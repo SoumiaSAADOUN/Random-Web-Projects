@@ -10,7 +10,8 @@ inputFile.addEventListener("change", () => {
 
   //let valides=[];
   let non_valides = []; //  la liste qui va contenir les lignes traitées
-
+  let header = `ccp;cle;nomPrenomAnem;montant;nomPrenomPoste`;
+  non_valides.push(header);
   reader.onload = () => {
     /* PROGRESS BAR */
     let bar = document.getElementById("theBar");
@@ -39,6 +40,7 @@ inputFile.addEventListener("change", () => {
     let lines = reader.result.split("\n");
     let total = 0;
     let allLines = [];
+    allLines.push(header)
 
     for (
       let i = 166;
@@ -48,7 +50,7 @@ inputFile.addEventListener("change", () => {
       let line = lines[i];
       let newLine = line.replace("*", " ");
       newLine = newLine.replaceAll("*", ";");
-     
+
       // pour chaque ligne, on verifie si elle est marquée par un des critères de blocage
       if (keyWords.some((word) => newLine.includes(word))) {
         // let newLine = line.replace("*", " ");
@@ -67,7 +69,7 @@ inputFile.addEventListener("change", () => {
       // }
     }
 
-    console.log(allLines.length)
+    console.log(allLines.length);
 
     document.getElementById("total").innerText = total;
     document.getElementById("bloques").innerText = non_valides.length;
@@ -107,6 +109,7 @@ inputFinalEDI.addEventListener("change", () => {
   document.getElementById("success").style.visibility = "hidden";
   inputFinalEDI.setAttribute("disabled", true);
   var reader = new FileReader();
+  let header = `ccp;cle;nomPrenomAnem;montant;nomPrenomPoste\n`;
 
   reader.onload = () => {
     /* PROGRESS BAR */
@@ -134,8 +137,11 @@ inputFinalEDI.addEventListener("change", () => {
     // let part = 0;
 
     let firstGroupList = [];
+    // firstGroupList.push(header)
     let secondGroupList = [];
+    // secondGroupList.push(header)
     let thirdGroupList = [];
+    // thirdGroupList.push(header)
     let firstGroup = [
       "00000001300000",
       "10000001300000",
@@ -221,9 +227,9 @@ inputFinalEDI.addEventListener("change", () => {
       .slice(0, 10)}.txt`;
     download_third_file.click();
 
-    document.getElementById("first").innerText = firstGroupList.length-1;
-    document.getElementById("second").innerText = secondGroupList.length-1;
-    document.getElementById("third").innerText = thirdGroupList.length-1;
+    document.getElementById("first").innerText = firstGroupList.length - 1;
+    document.getElementById("second").innerText = secondGroupList.length - 1;
+    document.getElementById("third").innerText = thirdGroupList.length - 1;
     // document.getElementById("valides").innerText=valides.length;
     document.getElementById("result_division").style.display = "flex";
     document.getElementById("result_division").style.visibility = "visible";
