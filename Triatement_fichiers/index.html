@@ -1,56 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" href="anem-logo.png" />
     <title>Traitement des fichiers EDI</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='script.js' defer></script>
-   
-</head>
-<body >
-    <nav>
-        <img alt="logo-anem" src="logo_anem.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <nav style="width: 100%">
+      <img alt="logo-anem" src="logo_anem.png" />
     </nav>
     <div id="container">
-        <h1>Traitement des fichiers <span>EDI</span></h1>
-   
-         <div class="buttonsContainer">
-            
-           <div  class="buttonsContainer">
-            <label>
-                <h4 style="margin:0">Importer le fichier</h4> 
-                 <input type="file" id="inputFile" accept=".txt">
-                 <i class="fa fa-file-text-o" style="font-size:36px;"></i>
-             </label>
-   </div>
+      <h1>Traitement des fichiers <span>EDI</span></h1>
 
-   <div  class="buttonsContainer">
-  
-         <label>
-            <h4 style="margin:0">Importer le fichier EDI final</h4> 
-             <input type="file" id="inputFinalEDI" accept=".txt">
-             <i class="fa fa-file-text-o" style="font-size:36px;"></i>
-         </label>
-           </div>
-         </div>
-
-        <div id="progressBar">
-            <div id="theBar"></div>
-            <h2 id="success" style="visibility: hidden ; text-align: center;">Opération terminée avec succès !</h2>
-            <div id="result">
-                <p class="resultItem" >Nombre d'enregistrements dans l'EDI TEST <span id="total"></span></p>
-                <p class="resultItem" >Nombre d'enregistrements A BLOQUER dans l'EDI TEST <span id="bloques"></span></p>
-                <p class="resultItem" >Nombre d'enregistrements VALIDES dans l'EDI TEST <span id="valides"></span></p>
-
-            </div>
+      <div class="buttonsContainer">
+        <div class="buttonContainer">
+          <h3 style="text-align: center">
+            Extraction des enregistrements à bloquer à partir du fichier parvenu
+            d'Algérie poste
+          </h3>
+          <label>
+            <h4 style="margin: 0">Importer le fichier</h4>
+            <input type="file" id="inputFile" accept=".txt" />
+            <i class="fa fa-file-text-o" style="font-size: 36px"></i>
+          </label>
         </div>
-          
-        
+
+        <div
+          class="buttonContainer"
+          data-tooltip="Assurez-vous que le fichier ne contient pas des lignes vides à la fin"
+        >
+          <h3 style="text-align: center">
+            Partage du fichier EDI final sur trois fichiers d'un volume max de
+            800K enregistrements
+          </h3>
+          <label>
+            <h4 style="margin: 0">Importer le fichier</h4>
+            <input type="file" id="inputFinalEDI" />
+            <i class="fa fa-file-text-o" style="font-size: 36px"></i>
+          </label>
+        </div>
+      </div>
+
+      <div id="progressBar">
+        <div id="theBar"></div>
+        <h2 id="success" style="visibility: hidden; text-align: center; margin-bottom: 0px;">
+          Opération terminée avec succès !
+        </h2>
+        <div id="result">
+          <p class="resultItem">
+            Nombre d'enregistrements dans l'EDI TEST <span id="total"></span>
+          </p>
+          <p class="resultItem">
+            Nombre d'enregistrements A BLOQUER dans l'EDI TEST
+            <span id="bloques"></span>
+          </p>
+          <!-- <p class="resultItem" >Nombre d'enregistrements VALIDES dans l'EDI TEST <span id="valides"></span></p> -->
+        </div>
+        <div id="result_division">
+          <p class="resultItem">
+            Taille du premier fichier <span id="first"></span>
+          </p>
+          <p class="resultItem">
+            Taille du deixième fichier
+            <span id="second"></span>
+          </p>
+          <p class="resultItem">
+            Taille du troisième fichier
+            <span id="third"></span>
+          </p>
+          <!-- <p class="resultItem" >Nombre d'enregistrements VALIDES dans l'EDI TEST <span id="valides"></span></p> -->
+        </div>
+      </div>
     </div>
-   
-</body>
+  </body>
 </html>
